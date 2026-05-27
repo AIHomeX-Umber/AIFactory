@@ -22,9 +22,7 @@ export function contactLabel(key: keyof ContactMethods): string {
   const labels: Record<keyof ContactMethods, string> = {
     wechat: "微信",
     whatsapp: "WhatsApp",
-    email: "Email",
-    telegram: "Telegram",
-    x: "X (Twitter)",
+    email: "邮箱",
   };
   return labels[key];
 }
@@ -33,10 +31,6 @@ export function contactHref(key: keyof ContactMethods, value: string): string | 
   switch (key) {
     case "email":
       return `mailto:${value}`;
-    case "telegram":
-      return value.startsWith("@") ? `https://t.me/${value.slice(1)}` : `https://t.me/${value}`;
-    case "x":
-      return value.startsWith("@") ? `https://x.com/${value.slice(1)}` : `https://x.com/${value}`;
     case "whatsapp":
       return `https://wa.me/${value.replace(/\D/g, "")}`;
     default:

@@ -2,8 +2,6 @@ export type ContactMethods = {
   wechat?: string;
   whatsapp?: string;
   email?: string;
-  telegram?: string;
-  x?: string;
 };
 
 export type Profile = {

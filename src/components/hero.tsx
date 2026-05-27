@@ -12,28 +12,30 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-xs font-mono text-[#4ade80] mb-6 tracking-widest uppercase">
-            AI-native · B2B · Opportunity Network
+          <p className="text-xs font-mono text-[#4ade80] mb-8 tracking-widest uppercase">
+            AI-native B2B opportunity network
           </p>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight">
-            让产品、渠道与机会
-            <br />高效连接。
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
+            发布供给。
+            <br />对接需求。
+            <br />共享工作流。
           </h1>
-          <p className="text-lg text-[#6b7280] mb-10 max-w-xl mx-auto">
-            FactoryRouter — 发布供给、对接需求、共享工作流。像发 GitHub Issue 一样简单。
+          <p className="text-base text-[#6b7280] mb-10 max-w-md mx-auto leading-relaxed">
+            像 GitHub Issue 一样，
+            <br />连接制造业、渠道与商业机会。
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/offers/new"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#4ade80] text-black font-semibold text-sm hover:bg-[#22c55e] transition-colors"
             >
-              开始发布 →
+              发布一个机会 →
             </Link>
             <Link
               href="/offers"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-[#1f2228] text-[#a1a1aa] text-sm hover:text-white hover:border-[#374151] transition-colors"
             >
-              浏览供给
+              浏览网络
             </Link>
           </div>
         </motion.div>

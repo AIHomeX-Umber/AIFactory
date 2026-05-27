@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Profile, ContactMethods } from "@/lib/types";
 
-const contactKeys: (keyof ContactMethods)[] = ["wechat", "whatsapp", "email", "telegram", "x"];
+const contactKeys: (keyof ContactMethods)[] = ["wechat", "whatsapp", "email"];
 
 export default function SettingsPage() {
   const router = useRouter();
@@ -89,14 +89,17 @@ export default function SettingsPage() {
 
         <div className="rounded-xl border border-[#1f2228] bg-[#111318] p-6 space-y-4">
           <h2 className="text-sm font-medium text-[#a1a1aa]">联系方式</h2>
+          <p className="text-xs text-[#4b5563]">留下一个连接方式，让别人能联系到你。</p>
           {contactKeys.map((key) => (
             <div key={key} className="flex items-center gap-3">
-              <span className="text-xs text-[#6b7280] w-24 shrink-0">{key === "x" ? "X (Twitter)" : key.charAt(0).toUpperCase() + key.slice(1)}</span>
+              <span className="text-xs text-[#6b7280] w-14 shrink-0">
+                {key === "wechat" ? "微信" : key === "whatsapp" ? "WhatsApp" : "邮箱"}
+              </span>
               <input
-                type="text"
+                type={key === "email" ? "email" : "text"}
                 value={contact[key] ?? ""}
                 onChange={(e) => setContact({ ...contact, [key]: e.target.value })}
-                placeholder={key === "email" ? "you@example.com" : key === "wechat" ? "微信号" : `@username`}
+                placeholder={key === "email" ? "you@example.com" : key === "wechat" ? "微信号" : "+86 138 0000 0000"}
                 className="flex-1 rounded-lg border border-[#1f2228] bg-[#0a0b0d] px-3 py-2 text-white placeholder-[#4b5563] text-sm focus:outline-none focus:border-[#4ade80] transition-colors"
               />
             </div>

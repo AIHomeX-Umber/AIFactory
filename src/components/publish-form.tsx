@@ -29,13 +29,11 @@ const typeLabels: Record<ObjectType, string> = {
   workflow: "工作流",
 };
 
-const contactKeys: (keyof ContactMethods)[] = ["wechat", "whatsapp", "email", "telegram", "x"];
+const contactKeys: (keyof ContactMethods)[] = ["wechat", "whatsapp", "email"];
 const contactPlaceholders: Record<keyof ContactMethods, string> = {
   wechat: "微信号",
-  whatsapp: "+1234567890",
+  whatsapp: "+86 138 0000 0000",
   email: "you@example.com",
-  telegram: "@username",
-  x: "@handle",
 };
 
 export default function PublishForm({ type }: Props) {
@@ -198,14 +196,16 @@ export default function PublishForm({ type }: Props) {
       <div>
         <label className="block text-sm font-medium text-[#a1a1aa] mb-2">
           联系方式 <span className="text-[#4ade80]">*</span>
-          <span className="text-[#4b5563] font-normal ml-1">（至少填写一种）</span>
         </label>
+        <p className="text-xs text-[#4b5563] mb-3">留下一个连接方式，让别人能联系到你。</p>
         <div className="space-y-2.5">
           {contactKeys.map((key) => (
             <div key={key} className="flex items-center gap-3">
-              <span className="text-xs text-[#6b7280] w-20 shrink-0">{key === "x" ? "X (Twitter)" : key.charAt(0).toUpperCase() + key.slice(1)}</span>
+              <span className="text-xs text-[#6b7280] w-14 shrink-0">
+                {key === "wechat" ? "微信" : key === "whatsapp" ? "WhatsApp" : "邮箱"}
+              </span>
               <input
-                type="text"
+                type={key === "email" ? "email" : "text"}
                 value={contact[key] ?? ""}
                 onChange={(e) => setContact({ ...contact, [key]: e.target.value })}
                 placeholder={contactPlaceholders[key]}
