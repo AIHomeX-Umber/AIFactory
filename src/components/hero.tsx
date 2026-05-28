@@ -33,35 +33,34 @@ export default function Hero() {
       <section className="pt-48 pb-28 px-6">
         <div className="max-w-3xl mx-auto text-center">
 
-          {/* Headline — two lines, stagger */}
-          <motion.h1
-            className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.15] mb-10 tracking-tight"
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease }}
-          >
-            好产品
-            <br />好渠道
-          </motion.h1>
+          {/* Headline — one sentence, natural two-line break, micro stagger */}
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.15] tracking-tight mb-10">
+            <motion.span
+              className="block"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease }}
+            >
+              帮好产品
+            </motion.span>
+            <motion.span
+              className="block"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.05, duration: 0.7, ease }}
+            >
+              找到最合适的渠道
+            </motion.span>
+          </h1>
 
-          {/* AI narrative — brighter, calm, infrastructural */}
+          {/* Subtitle — one line, muted */}
           <motion.p
-            className="text-xl text-[#a1a1aa] font-light tracking-wide mb-5"
+            className="text-lg text-[#6b7280] mb-10"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.6, ease }}
+            transition={{ delay: 0.2, duration: 0.6, ease }}
           >
-            AI 帮产品找到最 fit 的渠道
-          </motion.p>
-
-          {/* Subtitle — quiet, secondary */}
-          <motion.p
-            className="text-sm text-[#4b5563] mb-14"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25, duration: 0.6, ease }}
-          >
-            让好的产品被充分看见
+            让好的产品被充分看见。
           </motion.p>
 
           {/* CTAs */}
@@ -69,7 +68,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-3 justify-center"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6, ease }}
+            transition={{ delay: 0.3, duration: 0.6, ease }}
           >
             <button
               onClick={handleEnterNetwork}
