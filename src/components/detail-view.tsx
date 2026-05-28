@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 import ContactModal from "@/components/contact-modal";
+import JoinModal from "@/components/join-modal";
 import SignalBadge from "@/components/signal-badge";
 import type { Offer, Request, Workflow, ObjectType, ContactMethods } from "@/lib/types";
 
@@ -21,6 +22,7 @@ const typeConfig: Record<ObjectType, { color: string; label: string; ctaLabel: s
 export default function DetailView({ type, item }: Props) {
   const config = typeConfig[type];
   const [modalOpen, setModalOpen] = useState(false);
+  const [joinOpen, setJoinOpen] = useState(false);
   const [saved, setSaved] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
 
@@ -48,7 +50,7 @@ export default function DetailView({ type, item }: Props) {
   }, [type, item.id]);
 
   async function handleSave() {
-    if (!userId) { window.location.href = "/login"; return; }
+    if (!userId) { setJoinOpen(true); return; }
     const { createClient } = await import("@/lib/supabase/client");
     const supabase = createClient();
     if (saved) {
@@ -61,7 +63,7 @@ export default function DetailView({ type, item }: Props) {
   }
 
   async function handleFork() {
-    if (!userId) { window.location.href = "/login"; return; }
+    if (!userId) { setJoinOpen(true); return; }
     const { createClient } = await import("@/lib/supabase/client");
     const supabase = createClient();
     const w = item as Workflow;
@@ -148,7 +150,7 @@ export default function DetailView({ type, item }: Props) {
         {/* Actions */}
         <div className="flex flex-wrap gap-3">
           <button
-            onClick={() => setModalOpen(true)}
+            onClick={() => userId ? setModalOpen(true) : setJoinOpen(true)}
             className="px-5 py-2.5 rounded-lg text-black font-semibold text-sm transition-all"
             style={{ background: config.color }}
           >
@@ -182,6 +184,7 @@ export default function DetailView({ type, item }: Props) {
         objectType={type}
         objectId={item.id}
       />
+      <JoinModal isOpen={joinOpen} onClose={() => setJoinOpen(false)} />
     </>
   );
 }
