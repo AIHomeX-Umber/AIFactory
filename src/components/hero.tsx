@@ -36,17 +36,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-xs font-mono text-[#4ade80] mb-8 tracking-widest uppercase">
-              AI-native B2B opportunity network
-            </p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
-              发布好产品
-              <br />对接好渠道
-              <br />链接对的人
+              产品。
+              <br />渠道。
+              <br />链接。
             </h1>
             <p className="text-base text-[#6b7280] mb-10 max-w-md mx-auto leading-relaxed">
-              让好的产品被充分看见，
-              <br />让靠谱的渠道触达到源头供应链。
+              好产品，好渠道，对的合作方。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
