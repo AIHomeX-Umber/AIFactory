@@ -247,3 +247,7 @@ Currently focused on:
 ## License
 
 Private / Early Stage
+
+---
+
+[中文版](./README.zh.md)
