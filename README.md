@@ -1,36 +1,249 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FactoryRouter
 
-## Getting Started
+Route products to the right channels.  
+Route channels to reliable suppliers.
 
-First, run the development server:
+FactoryRouter is an AI-native B2B opportunity network designed to reduce friction between products, channels, suppliers, and workflows.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+We believe global trade does not suffer from a lack of products.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+It suffers from low-quality matching.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Wrong channels.  
+Unstable suppliers.  
+Broken workflows.  
+Slow communication.  
+Fragmented collaboration.
 
-## Learn More
+FactoryRouter exists to improve the fit between supply, demand, and operational workflows.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## What is FactoryRouter?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+FactoryRouter is not:
 
-## Deploy on Vercel
+- a traditional B2B marketplace
+- a product directory
+- a sourcing website
+- a dropshipping platform
+- an AI chatbot wrapper
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+FactoryRouter is a routing layer for opportunities.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+It helps:
+
+- products find the right channels
+- channels find reliable suppliers
+- buyers and sellers collaborate through AI-native workflows
+
+---
+
+## Core Objects
+
+FactoryRouter is built around three core objects.
+
+### Offer
+
+Something you can provide.
+
+Examples:
+
+- products
+- inventory
+- manufacturing capacity
+- sourcing services
+- operational services
+- channel resources
+- AI capabilities
+
+### Request
+
+Something you are looking for.
+
+Examples:
+
+- suppliers
+- products
+- channels
+- operational partners
+- logistics support
+- workflow services
+
+### Workflow
+
+Reusable operational capability.
+
+Examples:
+
+- Amazon listing workflow
+- Walmart onboarding workflow
+- RFQ workflow
+- sourcing workflow
+- QC workflow
+- compliance workflow
+
+Workflows are first-class objects.
+
+They are not just tools.  
+They are tradable operational capabilities.
+
+---
+
+## Principles
+
+**Action-driven identity**
+
+Users do not choose roles during signup.
+
+Identity emerges from actions:
+
+- publish an Offer → Seller profile
+- publish a Request → Buyer profile
+- publish or use a Workflow → Workflow workspace
+
+One user can be all three.
+
+---
+
+**Fit over volume**
+
+FactoryRouter is not designed to maximize listings.
+
+It is designed to improve matching quality.
+
+The goal is not more connections.
+
+The goal is better connections.
+
+---
+
+**Workflows are infrastructure**
+
+AI workflows are not side features.
+
+They are operational infrastructure for modern B2B collaboration.
+
+---
+
+**Opportunity-first thinking**
+
+FactoryRouter does not treat trade as static catalog pages.
+
+It treats trade as flowing opportunity objects.
+
+---
+
+## V1 Scope
+
+**Included**
+
+- User auth
+- Publish Offers
+- Publish Requests
+- Publish Workflows
+- Browse feeds
+- Detail pages
+- Save / bookmark
+- Contact actions
+- Workflow fork
+- Basic search
+
+**Not included**
+
+- Payments
+- Escrow
+- CRM
+- Internal messaging
+- AI auto-matching
+- AI agents
+- Complex enterprise permissions
+
+---
+
+## Tech Stack
+
+| Layer | Stack |
+|---|---|
+| Frontend | Next.js 16 |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Auth | Supabase Auth |
+| Database | PostgreSQL |
+| Storage | Supabase Storage |
+| Deployment | Vercel |
+| DNS | Cloudflare |
+| AI Layer | OpenRouter *(future)* |
+
+---
+
+## Design Philosophy
+
+FactoryRouter should feel closer to:
+
+- Linear
+- Stripe
+- Notion
+- Vercel
+
+— not —
+
+- Alibaba
+- Made-in-China
+- traditional sourcing portals
+
+Minimal.  
+Calm.  
+Operational.  
+Infrastructure-like.
+
+---
+
+## Current Focus
+
+The first milestone is simple:
+
+Help buyers and sellers establish higher-quality connections with less friction.
+
+Before intelligence layers.  
+Before AI matching.  
+Before automation.
+
+Connection quality comes first.
+
+---
+
+## Long-Term Vision
+
+FactoryRouter may eventually evolve into:
+
+- a B2B opportunity graph
+- a workflow-native sourcing network
+- a routing infrastructure for global trade
+- a reputation and fit layer for supply chains
+
+But V1 starts with one thing:
+
+Making better connections happen faster.
+
+---
+
+## Status
+
+Early build stage.
+
+Currently focused on:
+
+- Gigacloud ecosystem buyers
+- suppliers
+- factories
+- sourcing operators
+- cross-border channel sellers
+
+---
+
+## License
+
+Private / Early Stage
