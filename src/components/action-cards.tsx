@@ -10,6 +10,7 @@ const cards = [
   {
     title: "发布产品",
     subtitle: "展示你的产品、资源或服务，找到合适的渠道与合作方。",
+    signal: "最近：杭州家具工厂发布了新产品",
     cta: "发布产品 →",
     href: "/offers/new",
     color: "#4ade80",
@@ -19,6 +20,7 @@ const cards = [
   {
     title: "寻找渠道",
     subtitle: "发布你的渠道需求，让靠谱的产品和供应链主动找到你。",
+    signal: "最近：深圳 TikTok 团队正在寻找供应链",
     cta: "寻找渠道 →",
     href: "/requests/new",
     color: "#60a5fa",
@@ -28,6 +30,7 @@ const cards = [
   {
     title: "AI Fit",
     subtitle: "让 AI 帮你高效链接🔗对的人和团队。",
+    signal: "最近：3 个 AI Fit 今天在此被共享",
     cta: "进入 AI Fit →",
     href: "/workflows/new",
     color: "#fbbf24",
@@ -84,6 +87,10 @@ export default function ActionCards() {
                 <div>
                   <h3 className="text-white font-semibold text-lg mb-1.5">{card.title}</h3>
                   <p className="text-[#6b7280] text-sm leading-relaxed">{card.subtitle}</p>
+                  <p className="mt-4 text-xs text-zinc-500 leading-relaxed">
+                    <span className="inline-block mr-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 align-middle" />
+                    {card.signal}
+                  </p>
                 </div>
                 <div className="flex flex-col gap-2 mt-auto">
                   <button

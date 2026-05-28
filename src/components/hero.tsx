@@ -6,11 +6,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import JoinModal from "@/components/join-modal";
 
-const liveSignals = [
-  "杭州家具工厂 发布了新产品",
-  "深圳 TikTok 团队 正在寻找供应链",
-  "3 个 AI Fit 今天在此被共享",
-];
 
 export default function Hero() {
   const router = useRouter();
@@ -49,23 +44,10 @@ export default function Hero() {
               <br />对接好渠道
               <br />链接对的人
             </h1>
-            <p className="text-base text-[#6b7280] mb-6 max-w-md mx-auto leading-relaxed">
+            <p className="text-base text-[#6b7280] mb-10 max-w-md mx-auto leading-relaxed">
               让好的产品被充分看见，
               <br />让靠谱的渠道触达到源头供应链。
             </p>
-
-            {/* Live activity — static mock, V1 */}
-            <div className="mb-10 space-y-1.5">
-              {liveSignals.map((signal, i) => (
-                <p
-                  key={i}
-                  className="flex items-center justify-center gap-2 text-xs font-mono text-[#374151]"
-                >
-                  <span className="w-1 h-1 rounded-full bg-[#4ade80]/50 shrink-0" />
-                  {signal}
-                </p>
-              ))}
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
