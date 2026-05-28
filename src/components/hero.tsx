@@ -30,11 +30,11 @@ export default function Hero() {
 
   return (
     <>
-      <section className="pt-48 pb-28 px-6">
+      <section className="pt-28 pb-10 px-6">
         <div className="max-w-3xl mx-auto text-center">
 
           {/* Headline — one sentence, natural two-line break, micro stagger */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.15] tracking-tight mb-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.2] tracking-tight mb-7">
             <motion.span
               className="block"
               initial={{ opacity: 0, y: 24 }}
@@ -55,7 +55,7 @@ export default function Hero() {
 
           {/* Subtitle — one line, muted */}
           <motion.p
-            className="text-lg text-[#6b7280] mb-10"
+            className="text-base text-[#6b7280] mb-7"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6, ease }}
