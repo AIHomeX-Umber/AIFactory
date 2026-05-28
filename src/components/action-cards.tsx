@@ -5,31 +5,31 @@ import Link from "next/link";
 
 const cards = [
   {
-    title: "发布供给",
-    subtitle: "展示你的产品、资源或服务，找到合适的合作方。",
-    cta: "发布供给 →",
+    title: "发布产品",
+    subtitle: "展示你的产品、资源或服务，找到合适的渠道与合作方。",
+    cta: "发布产品 →",
     href: "/offers/new",
     color: "#4ade80",
     browse: "/offers",
-    browseLabel: "浏览供给",
+    browseLabel: "浏览产品",
   },
   {
-    title: "发布需求",
-    subtitle: "描述你在寻找什么，让合适的人主动找你。",
-    cta: "发布需求 →",
+    title: "寻找产品",
+    subtitle: "发布你的渠道需求，让靠谱的产品和供应链主动找到你。",
+    cta: "寻找产品 →",
     href: "/requests/new",
     color: "#60a5fa",
     browse: "/requests",
-    browseLabel: "浏览需求",
+    browseLabel: "浏览渠道",
   },
   {
-    title: "共享工作流",
-    subtitle: "分享你的 AI 流程，复用他人的最佳实践。",
-    cta: "发布工作流 →",
+    title: "AI Fit",
+    subtitle: "让 AI 帮你高效链接🔗对的人和团队。",
+    cta: "AI Fit →",
     href: "/workflows/new",
     color: "#fbbf24",
     browse: "/workflows",
-    browseLabel: "浏览工作流",
+    browseLabel: "浏览 workflow",
   },
 ];
 

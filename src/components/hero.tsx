@@ -16,13 +16,12 @@ export default function Hero() {
             AI-native B2B opportunity network
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
-            发布供给。
-            <br />对接需求。
-            <br />共享工作流。
+            发布产品。
+            <br />对接渠道。
+            <br />AI 链接🔗。
           </h1>
           <p className="text-base text-[#6b7280] mb-10 max-w-md mx-auto leading-relaxed">
-            像 GitHub Issue 一样，
-            <br />连接制造业、渠道与商业机会。
+            让好的产品被充分看见，让靠谱的渠道触达到源头供应链。
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

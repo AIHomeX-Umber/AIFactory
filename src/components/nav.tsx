@@ -46,9 +46,9 @@ export default function Nav() {
         </Link>
 
         <div className="flex items-center gap-6 text-sm">
-          <Link href="/offers" className={`transition-colors ${isActive("/offers")}`}>供给</Link>
-          <Link href="/requests" className={`transition-colors ${isActive("/requests")}`}>需求</Link>
-          <Link href="/workflows" className={`transition-colors ${isActive("/workflows")}`}>工作流</Link>
+          <Link href="/offers" className={`transition-colors ${isActive("/offers")}`}>产品</Link>
+          <Link href="/requests" className={`transition-colors ${isActive("/requests")}`}>渠道</Link>
+          <Link href="/workflows" className={`transition-colors ${isActive("/workflows")}`}>workflow</Link>
           {user ? (
             <div className="flex items-center gap-3">
               <Link
