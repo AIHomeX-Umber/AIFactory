@@ -1,6 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "AI Workflow Documentation — FactoryRouter",
   description:
     "How to use FactoryRouter AI Fit workflows to accelerate product routing, listing creation, and lead qualification.",

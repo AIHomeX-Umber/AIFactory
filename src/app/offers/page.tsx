@@ -1,9 +1,19 @@
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 import ObjectCard from "@/components/object-card";
 import Link from "next/link";
+import type { Metadata } from "next";
 import type { Offer } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "供给市场 — 产品 · 资源 · 合作机会 | FactoryRouter",
+  description:
+    "浏览中国工厂发布的产品、资源和合作机会。找到适合你渠道的差异化货源，直连工厂供应端。",
+  alternates: {
+    canonical: "https://factoryrouter.com/offers",
+  },
+};
 
 export default async function OffersPage() {
   let offers: Offer[] = [];

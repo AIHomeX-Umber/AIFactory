@@ -1,9 +1,19 @@
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 import ObjectCard from "@/components/object-card";
 import Link from "next/link";
+import type { Metadata } from "next";
 import type { Request } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "需求市场 — 渠道方在寻找什么 | FactoryRouter",
+  description:
+    "浏览跨境电商渠道方发布的产品需求。了解市场在找什么，让工厂的产能精准匹配渠道缺口。",
+  alternates: {
+    canonical: "https://factoryrouter.com/requests",
+  },
+};
 
 export default async function RequestsPage() {
   let requests: Request[] = [];

@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import PublishForm from "@/components/publish-form";
+
+export const metadata: Metadata = {
+  title: "发布供给 — 展示你的产品与资源 | FactoryRouter",
+  description:
+    "在 FactoryRouter 上发布你的产品、资源或服务能力，让渠道方主动找到你。",
+};
 
 export default function NewOfferPage() {
   return (

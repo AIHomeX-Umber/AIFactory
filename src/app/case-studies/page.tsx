@@ -1,6 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Case Studies — FactoryRouter",
   description:
     "Real routing outcomes: how Chinese manufacturers found the right distribution channels.",
